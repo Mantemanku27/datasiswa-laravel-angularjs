@@ -23,10 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Services Contact 
-        $this->app->when('App\Http\Controllers\ContactController')
-            ->needs('App\Domain\Contracts\ContactInterface')
-            ->give('App\Domain\Repositories\ContactRepository');
         // Services Biodata 
         $this->app->when('App\Http\Controllers\BiodataController')
             ->needs('App\Domain\Contracts\BiodataInterface')
